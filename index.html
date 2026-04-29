@@ -3,9 +3,8 @@
 <script>
   /* global nn */
 
-//  draw()
-// setInterval(draw, 100)
-
+  // draw()
+  // setInterval(draw, 100)
   function draw () {
     if (nn.mouseDown) {
       // let x = nn.random(nn.width)
@@ -13,14 +12,15 @@
       let x = nn.mouseX
       let y = nn.mouseY
       let hue = nn.random(360)
-      nn.create('div')
-        .content('😊')
+      nn.create('img')
+        .set('src', 'duck.gif')
         .css('user-select', 'none')
         .hueRotate(hue)
         .position(x, y)
-        .scale(3)
+        .scale(2)
         .rotate(hue)
         .addTo('body')
+
     }
   }
   nn.on('mousemove', draw)
